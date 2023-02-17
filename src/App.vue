@@ -1,0 +1,52 @@
+<template>
+  <div class="fixed top-0 right-0 left-0 bottom-0">
+    <div class="h-32 pb-10 w-full bg-gradient-to-b from-black fixed z-10 top-0 px-8 flex items-center justify-between lg:justify-center">
+      <div class="static position lg:absolute left-8">
+        <img src="@/assets/logo.png" class="h-14 cursor-pointer" @click="goHome">
+      </div>
+      <nav class="hidden text-white text-xl sm:flex gap-4 ">
+        <router-link active-class="active" to="/" class="neon">Home</router-link>
+        <router-link active-class="active" to="/characters" class="neon">Characters</router-link>
+        <router-link active-class="active" to="/locations" class="neon">Locations</router-link>
+        <router-link active-class="active" to="/episodes" class="neon">Episodes</router-link>
+      </nav>
+      <i class="fas fa-bars text-white text-2xl sm:hidden"></i>
+    </div>
+    <div class="fixed top-0 bottom-0 w-full px-8 overflow-y-scroll fondo pt-40 pb-36">
+      <router-view/>
+    </div>
+  </div>
+
+</template>
+<script>
+export default {
+  methods:{
+    goHome(){
+      this.$router.push('/')
+    }
+  }
+}
+</script>
+<style scoped>
+  .fondo{
+    background: url('@/assets/fondo2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .neon{
+    transition: 0.2s;
+  }
+
+  .neon:hover{
+    transform: scale(105%);
+  }
+
+  .neon.active{
+    text-shadow: 0 0 5px #35c9dd,
+    0 0 8px #35c9dd,
+    0 0 13px #35c9dd;
+  }
+
+</style>
+
