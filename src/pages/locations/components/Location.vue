@@ -1,10 +1,10 @@
 <template>
-  <div class="text-white border-b border-rick-5 py-8 px-4 text-2xl flex justify-between">
-    <div @click="goLocation()" class="cursor-pointer">
+  <div class="border-b border-rick-5 py-6 md:py-8 px-4 flex justify-between">
+    <div @click="goLocation()" class="cursor-pointer text-white text-base sm:text-lg md:text-xl lg:text-2xl">
       {{ location.name }}
     </div>
     <div class="text-rick-2" @click="goLocation()">
-      <img src="@/assets/arrow-right.svg" class="w-10 h-10 cursor-pointer">
+      <img src="@/assets/arrow-right.svg" class="w-5 h-5 sm:w-6 sm:h-6  lg:w-8 lg:h-8 cursor-pointer">
     </div>
   </div>
 </template>
