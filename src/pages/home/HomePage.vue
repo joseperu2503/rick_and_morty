@@ -1,8 +1,8 @@
 <template>
-  <div class="h-full">
+  <div class="h-full min-h-[400px]">
     <Slider :characters="characters"/>
 
-    <div class="mt-16 flex justify-center items-center h-1/2">
+    <div class="flex justify-center items-center h-1/2">
       <Button @click="enter"/>
     </div>
   </div>

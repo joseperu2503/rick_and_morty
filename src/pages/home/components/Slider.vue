@@ -13,7 +13,7 @@
       <div
         v-if="i == selected"
         class="absolute from-black h-1/3 w-full bottom-0 bg-gradient-to-t flex items-end px-4 pb-4 rounded-b-3xl overflow-x-hidden">
-        <div class="w-min sm:min-w-max text-base sm:text-lg md:text-xl lg:text-3xl font-semibold   text-white">{{ item.name }}</div>
+        <div class="w-min md:min-w-max text-base sm:text-lg md:text-xl lg:text-3xl font-semibold   text-white">{{ item.name }}</div>
       </div>
     </div>
   </div>
